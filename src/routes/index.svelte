@@ -1,46 +1,39 @@
 <style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
+	button {
+		border: 1px solid #3d3d3d;
+		border-radius: 4px;
+		background-color: #fafafa;
+		color: #3d3d3d;
+		position: relative;
+		padding: 12px 32px 12px 12px;
+		font-size: 1rem;
+		transition: 150ms cubic-bezier(0.075, 0.82, 0.165, 1);
+		transition-property: background-color, color;
+
 	}
 
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
+	button::after {
+		content: ">";
+		position: absolute;
+		right: 12px;
+		transition: 250ms cubic-bezier(0.075, 0.82, 0.165, 1) right;
 	}
 
-	figure {
-		margin: 0 0 1em 0;
+	button:hover::after {
+		right: 8px;
 	}
 
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
+	button:active {
+		background-color: #3d3d3d;
+		color: #fafafa;
 	}
 
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Chevron button</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>The home of the humble chevron button</h1>
+<button>Chevron button</button>
 
-<figure>
-	<img alt='Borat' src='great-success.png'>
-	<figcaption>HIGH FIVE!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
