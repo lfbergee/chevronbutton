@@ -15,6 +15,7 @@
     font-size: 1rem;
     transition: 150ms cubic-bezier(0.075, 0.82, 0.165, 1);
     transition-property: background-color, color;
+    margin: 48px 0;
   }
 
   button::after {
