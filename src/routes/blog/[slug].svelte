@@ -13,8 +13,8 @@
               slug: $slug
             }) {
               slug
-              createdAt
               title
+              ingress
               content
             }
           }`,
@@ -36,16 +36,37 @@
 
 <script>
   import marked from "marked";
+  import { fade } from "svelte/transition";
 
   export let post;
 </script>
 
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  article {
+    background-color: white;
+    padding: 4rem 4rem 2rem 3rem;
+  }
+  @media (min-width: 768px) {
+    article {
+      width: 100%;
+      max-width: 700px;
+    }
+  }
+</style>
+
 <svelte:head>
   <title>{post.title}</title>
 </svelte:head>
+<section transition:fade>
+  <article transition:fade>
+    <h1>{post.title}</h1>
+    {@html marked(post.ingress)}
 
-<h1>{post.title}</h1>
-
-<div class="content">
-  {@html marked(post.content)}
-</div>
+    {@html marked(post.content)}
+  </article>
+</section>

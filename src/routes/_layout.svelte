@@ -7,6 +7,7 @@
 <style>
   main {
     overflow: hidden;
+    padding: 64px 0;
   }
 </style>
 

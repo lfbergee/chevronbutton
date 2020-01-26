@@ -3,11 +3,13 @@
   --secondary-dark: #1f2833;
   --primary-light: #e4e4e5;
   --green: #526e5f;
+  --light-green: #33cc7a;
 }
 
 body {
   margin: 0;
   font-family: "Noto Sans", sans-serif;
+  font-display: fallback;
   font-size: 16px;
   line-height: 1.5;
   color: var(--secondary-dark);
